@@ -45,4 +45,4 @@ typedef struct specifier
     int (*f)(va_list args);
 }spe_tab;
 
-#endif // MAIN_H
+#endif

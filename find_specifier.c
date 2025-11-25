@@ -16,8 +16,13 @@ int (*get_specifier(char spe_c))(va_list)
         {'c', print_char},
         {'s', print_str},
         {'%', print_mod},
-        {'d', print_nb},
-        {'i', print_nb},
+        {'d', print_s_int},
+        {'i', print_s_int},
+        {'u', print_uns_int},
+        {'o', print_oct},
+        {'b', print_bin},
+        {'x', print_hex},
+        {'X', print_HEX},
         {'\0', NULL}
     };
 
