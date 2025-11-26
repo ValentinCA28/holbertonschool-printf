@@ -29,6 +29,7 @@
 	int print_HEX(va_list args);        /*%X*/
 	int print_oct(va_list args);        /*%o*/
 	int print_bin(va_list args);        /*%b*/
+	int print_reverse(va_list args);	/*%r*/
 
 	/* ---- utils function ---- */
 	int print_unsigned_base(unsigned int n, unsigned int base,

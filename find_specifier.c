@@ -16,7 +16,7 @@ int (*get_specifier(char spe_c))(va_list)
 	spe_tab tab[] = {
 		{'c', print_char},
 		{'s', print_str},
-		{'%', print_mod},
+		{'%', print_percent},
 		{'d', print_s_int},
 		{'i', print_s_int},
 		{'u', print_uns_int},
@@ -24,6 +24,7 @@ int (*get_specifier(char spe_c))(va_list)
 		{'b', print_bin},
 		{'x', print_hex},
 		{'X', print_HEX},
+		{'r', print_reverse},
 		{'\0', NULL}
 	};
 
