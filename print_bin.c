@@ -1,11 +1,15 @@
 #include "main.h"
 
 /**
- * print_bin - handler pour %b (binaire)
- * @args: liste d'arguments variadiques
+ * print_bin - Handler function for the %b specifier
+ * @args: Argument list containing the unsigned int to print
  *
- * Return: nombre de caractères imprimés
+ * Extracts an unsigned integer and prints it in base 2
+ * (binary) using print_unsigned_base.
+ *
+ * Return: Number of characters printed
  */
+
 int print_bin(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);

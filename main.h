@@ -8,29 +8,31 @@
 
 /* ---- Prototypes ---- */
 
-    /* ---- basic prototype ---- */
-    int _printf(const char *format, ...);
-    int _core_printf(const char *format, va_list args);
-    int _putchar(char c);
+	/* ---- basic prototype ---- */
+	int _printf(const char *format, ...);
+	int _core_printf(const char *format, va_list args);
+	int _putchar(char c);
 
-    /* ---- find function ---- */
+	/* ---- find function ---- */
 
-    int (*get_specifier(char c))(va_list);
+	int (*get_specifier(char c))(va_list);
 
-    /* ---- print function ---- */
+	/* ---- print function ---- */
 
-    int print_str(va_list args);        /*%s*/
-    int print_char(va_list args);       /*%c*/
-    int print_mod(va_list args);        /*%%*/
-    int print_s_int(va_list args);      /*%d and %i*/
-    int print_uns_int(va_list args);    /*%u*/
-    int print_hex(va_list args);        /*%x*/
-    int print_HEX(va_list args);        /*%X*/
-    int print_oct(va_list args);        /*%o*/
-    int print_bin(va_list args);        /*%b*/
+	/* each description function is withing it's own files*/
+	int print_str(va_list args);        /*%s*/
+	int print_char(va_list args);       /*%c*/
+	int print_mod(va_list args);        /*%%*/
+	int print_s_int(va_list args);      /*%d and %i*/
+	int print_uns_int(va_list args);    /*%u*/
+	int print_hex(va_list args);        /*%x*/
+	int print_HEX(va_list args);        /*%X*/
+	int print_oct(va_list args);        /*%o*/
+	int print_bin(va_list args);        /*%b*/
 
-    /* ---- utils function ---- */
-    int print_unsigned_base(unsigned int n, unsigned int base, const char *digits);
+	/* ---- utils function ---- */
+	int print_unsigned_base(unsigned int n, unsigned int base,
+		const char *digits);
 
 /* ---- Structure ---- */
 /**
@@ -41,8 +43,8 @@
 
 typedef struct specifier
 {
-    char spe_c;
-    int (*f)(va_list args);
-}spe_tab;
+	char spe_c;
+	int (*f)(va_list args);
+} spe_tab;
 
 #endif

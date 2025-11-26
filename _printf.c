@@ -1,39 +1,24 @@
 #include "main.h"
 
-/*
-*
-*
-*
-*
-*
-*/
-
-/*
-* initialiser les variables va_list
-* parcourir la chaine donné (format)
-* si % vu - renvoyer la bonne fonction
-* retourner le nb de caractère
-*
-*/
+/**
+ * _printf - Entry point for the custom printf function
+ * @format: Format string
+ *
+ * Description:
+ * Initializes the argument list, forwards the work to _core_printf,
+ * then closes the argument list and returns the total printed characters
+ *
+ * Return: Total number of printed characters, or -1 on error
+ */
 
 int _printf(const char *format, ...)
 {
-    va_list args;
-    /* int count_char = 0; */
-    /* int format_index = 0;  **/
+	va_list args;
+	/* Call the core engine (_core_printf) */
+	int print;
 
-/* print sert à appeler la fonction _print_text qui sera 
-*la fonction principale (moteur)*/
-    int print;
-
-    va_start(args, format);
-    print = _core_printf(format, args);
-
-    /*boucler sur format
-    * si caractère normal = putchart et count ++
-    * si % aller dans find specifier, choisir la bonne function
-    */
-
-    va_end(args);
-    return (print);
+	va_start(args, format);
+	print = _core_printf(format, args);
+	va_end(args);
+	return (print);
 }
