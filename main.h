@@ -22,7 +22,7 @@
 	/* each description function is withing it's own files*/
 	int print_str(va_list args);        /*%s*/
 	int print_char(va_list args);       /*%c*/
-	int print_mod(va_list args);        /*%%*/
+	int print_percent(va_list args);        /*%%*/
 	int print_s_int(va_list args);      /*%d and %i*/
 	int print_uns_int(va_list args);    /*%u*/
 	int print_hex(va_list args);        /*%x*/

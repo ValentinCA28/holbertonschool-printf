@@ -203,7 +203,7 @@ Individual functions for each format specifier:
 \- Handles
 .B %s
 .IP \(bu 3
-.BR print_mod ()
+.BR print_percent ()
 \- Handles
 .B %%
 .IP \(bu 3
@@ -260,7 +260,7 @@ Character conversion handler
 .B print_str.c
 String conversion handler
 .TP
-.B print_mod.c
+.B print_percent.c
 Percent sign handler
 .TP
 .B print_number.c

@@ -195,7 +195,7 @@ holbertonschool-printf/
 ├── find_specifier.c        # Specifier dispatcher with function pointer table
 ├── print_char.c            # Handler for %c conversion
 ├── print_str.c             # Handler for %s conversion
-├── print_mod.c             # Handler for %% conversion
+├── print_percent.c         # Handler for %% conversion
 ├── print_s_int.c           # Handler for %d and %i conversion
 ├── print_uns_int.c         # Handler for %u conversion
 ├── print_hex.c             # Handler for %x conversion (lowercase)
@@ -234,7 +234,7 @@ holbertonschool-printf/
 Each conversion specifier has its own dedicated handler:
 - **`print_char`:** Prints a single character from `va_arg`
 - **`print_str`:** Prints a string with NULL protection
-- **`print_mod`:** Prints a literal '%' character
+- **`print_percent`:** Prints a literal '%' character
 - **`print_s_int`:** Prints signed decimal integers (%d, %i)
 - **`print_uns_int`:** Prints unsigned decimal integers (%u)
 - **`print_hex`:** Prints lowercase hexadecimal (%x)
@@ -399,9 +399,9 @@ int print_str(va_list args);
 ```
 Handles %s conversion - prints a string with NULL safety.
 
-### `print_mod`
+### `print_percent`
 ```c
-int print_mod(va_list args);
+int print_percent(va_list args);
 ```
 Handles %% conversion - prints a literal percent sign.
 
