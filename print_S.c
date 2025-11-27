@@ -16,9 +16,7 @@ int print_S(va_list args)
 
 	str = va_arg(args, char *);
 	if (!str)
-	{
-		return (-1);
-	}
+		str = "(null)";
 
 	i = 0;
 	while (str[i])
