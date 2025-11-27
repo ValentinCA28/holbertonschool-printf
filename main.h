@@ -21,18 +21,21 @@
 
 	/* each description function is withing it's own files*/
 	int print_str(va_list args);        /*%s*/
+	int print_S(va_list args);			/*%S*/
 	int print_char(va_list args);       /*%c*/
-	int print_percent(va_list args);        /*%%*/
+	int print_percent(va_list args);    /*%%*/
 	int print_s_int(va_list args);      /*%d and %i*/
 	int print_uns_int(va_list args);    /*%u*/
 	int print_hex(va_list args);        /*%x*/
 	int print_HEX(va_list args);        /*%X*/
 	int print_oct(va_list args);        /*%o*/
 	int print_bin(va_list args);        /*%b*/
+	int print_reverse(va_list args);	/*%r*/
 
 	/* ---- utils function ---- */
 	int print_unsigned_base(unsigned int n, unsigned int base,
 		const char *digits);
+	int print_non_printable_hex(unsigned char value);
 
 /* ---- Structure ---- */
 /**
